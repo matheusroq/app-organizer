@@ -1,0 +1,39 @@
+<%- include('partials/header.ejs'); %>
+
+<%- include('partials/homenavbar.ejs'); %> 
+
+<body>
+    <div class="container">
+        <h1>Todas as tarefas</h1>
+        <hr>
+        <table class="table table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Título</th>
+                    <th>Tarefa</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% tarefas.forEach(tarefa => { %>
+                 <tr>
+                     <th> <%= tarefa.title %></th>
+                     <th> <%= tarefa.body %></th>
+                     <th>
+                         <a href="/edit/<%= tarefa.id %>" class="btn btn-warning btn-sm">Editar</a>
+                         <form action="/delete" method="POST" style="display: inline;" onsubmit="confirmarDelecao(event, this)">
+                             <input type="hidden" name="id" value="<%= tarefa.id %>">
+                             <button class="btn btn-danger btn-sm">Deletar</button>
+                         </form>
+                     </th>
+                 </tr>
+               <%  }) %>
+            </tbody>
+        </table>    
+
+    </div>
+
+
+
+
+<%- include('partials/footer.ejs'); %>

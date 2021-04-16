@@ -1,0 +1,19 @@
+<%- include ('partials/header.ejs') %>
+
+<%- include ('partials/navbar.ejs') %>
+    <div class="container">
+        <div class="card mt-4">
+            <div class="card-header">
+                <h2>Edição de tarefa</h2>
+            </div>
+            <div class="card-body">
+                <form action="/tarefas/update" method="POST" class="form-group">
+                    <input class="form-control" type="text" name="title" value="<%= tarefa.title %>"><br>
+                    <input type="text" class="form-control" name="body" value="<%= tarefa.body %>"><br>
+                    <input type="hidden" name="id" value="<%= tarefa.id %>">
+                    <button class="btn btn-primary">Atualizar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+<%- include ('partials/footer.ejs') %>
