@@ -38,11 +38,10 @@ export default class Login {
         console.log(senhaInput.length)
       
         if(senhaInput.length < 3 && senhaInput.length > 50) {
-            /* let p = document.createElement('p');
+             let p = document.createElement('p');
             p.className = 'invalid';
             p.innerHTML = 'Senha deve ter entre 3 e 50 caracteres.';
-            div.appendChild(p);  */
-            alert('nam')
+            div.appendChild(p);  
             error = true;
         }
 
