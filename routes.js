@@ -10,9 +10,11 @@ const { loggedUser } = require('./middlewares/middleware');
 //registro
 route.get('/cadastro/index', cadastroController.index);
 route.post('/cadastro/create', cadastroController.createAccount);
+
 //login
 route.get('/login', loginController.index);
 route.post('/login', loginController.login);
+route.get('/logout', loginController.logout);
 
 //home
 route.get('/', loggedUser, homeController.login);
