@@ -23,7 +23,8 @@ exports.login = async (req, res) => {
                     
                     res.redirect('/home')
                 } else {
-                    res.render('login')
+                    let errors = 'Senha inválida'
+                    res.render('login', { errors })
                 } 
             }
         })
