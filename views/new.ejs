@@ -4,20 +4,15 @@
 
 <body>
     
-    <div class="container">
-        <div class="card mt-4">
-            <div class="card-header">
-                <h5>Nova tarefa</h5>
-            </div>
-            <div class="card-body">
-                <form action="/save" method="POST" class="form-group">
-                    <input type="text" class="form-control" name="title" placeholder="Título"><br>
-                    <input type="text" class="form-control" name="body" placeholder="Tarefa"><br>
-                    <button class="btn btn-success">Criar</button>
+    <div class="form-container">
+                <h1>Nova Tarefa</h1>
+                <form action="/save" method="POST" class="form">
+                    <input type="text" class="input" name="title" placeholder="Título"><br>
+                    <input type="text" class="input" name="body" placeholder="Tarefa"><br>
+                    <button type="submit" class="btn">Criar</button>
                 </form>
-            </div>
-        </div>
-    </div>    
+
+        </div>   
 
 
 

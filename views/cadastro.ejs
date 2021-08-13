@@ -1,30 +1,26 @@
-<%- include('partials/header.ejs') %> 
+<%- include('partials/header.ejs') %>
+    <%- include('partials/navbar.ejs') %>
 
-    <div class="container">
-        <dv class="card mt-5">
-            <div class="card-header">
-                <h4>Cadastro</h4>
-            </div>
-           
-            <div class="card-body">
-                <form action="/cadastro/create" method="POST" class="form-group mt-3 mx-2">
-                    <div class="form-group">
-                        <input type="email" name="email" class="form-control" placeholder="Digite seu email">
-                    </div>
-                    <div class="form-group">
-                        <input type="password" name="senha" class="form-control" placeholder="Digite sua senha">
-                    </div>
-                   <% if(errors.length > 0) { %>
-                      <p class="text-danger"><%= errors[0] %> </p>
-                      <p><a href="/cadastro/index">Tentar novamente.</a></p>
-                   <% } else if(success) { %>
-                       <p class="text-success"><%= success %> </p>
-                       <p><a href="/login">Realizar o login.</a></p>
-                    <%  }  %> 
-                    <button class="btn btn-info btn-block">Cadastrar</button>
-                </form>
-            </div>
+        <div class="form-container">
+            <h1>Cadastro</h1>
+            <form action="/cadastro/create" method="POST" class="form">
+
+                <input type="email" name="email" class="input" placeholder="Digite seu email">
+                <input type="password" name="senha" class="input" placeholder="Digite sua senha">
+
+                <% if(errors.length> 0) { %>
+                    <p class="invalid">
+                        <%= errors[0] %>
+                    </p>
+                    <a class="link" href="/cadastro/index">Tentar novamente.</a>
+                    <% } else if(success) { %>
+                        <p class="success">
+                            <%= success %>
+                        </p>
+                        <div class="link-container"><a class="link" href="/login">Realizar o login.</a></div>
+                        <% } %>
+                            <button class="btn">Cadastrar</button>
+            </form>
         </div>
-    </div>
 
-<%- include('partials/footer.ejs') %> 
+        <%- include('partials/footer.ejs') %>
