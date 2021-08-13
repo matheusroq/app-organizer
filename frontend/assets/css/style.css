@@ -1,8 +1,3 @@
-.invalid {
-    color: red;
-    font-weight: bold;
-}
-
 :root {
     --primary: #4760f0;
     --secondary: #ff3b63;
@@ -24,6 +19,16 @@ body {
 }
 .success {
     color: var(--green);
+}
+.invalid {
+    color: var(--white-smoke);
+    font-weight: bold;
+}
+.response {
+    background-color: crimson;
+    border-radius: 10px;
+    margin: 12px auto;
+    padding: 10px;
 }
 
 .navbar {

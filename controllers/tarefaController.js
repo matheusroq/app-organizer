@@ -6,15 +6,16 @@ exports.new =  (req, res) => {
 
 exports.save = (req, res) =>{
     let id = req.session.user.id;
-    let title = req.body.title
-    let body = req.body.body
-    Task.create({
+    const {title, body, date} = req.body
+
+     Task.create({
         cadastroId: id,
         title,
-        body
+        body,
+        task_date: date
     }).then(() => {
         res.redirect('/home');
-    })
+    }) 
 };
 
 exports.delete = (req, res) => {

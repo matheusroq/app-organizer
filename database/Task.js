@@ -10,12 +10,21 @@ const Task = connection.define('task', {
     body: {
         type: Sequelize.STRING,
         allownull: false
+    },
+    task_date: {
+        type: Sequelize.DATEONLY,
+        allownull: false
+    },
+    isComplete: {
+        type: Sequelize.BOOLEAN,
+        allownull: false,
+        defaultValue: false,
     }
 });
 
 
 Cadastro.hasMany(Task);
 
-Task.sync({force: false}).then(() => {})
+Task.sync({alter: true}).then(() => {})
 
 module.exports = Task;
