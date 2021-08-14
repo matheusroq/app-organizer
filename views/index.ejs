@@ -9,7 +9,7 @@
                 <div class="tasks">
                     <h5><%= tarefa.title %></h5>
                     <p><%= tarefa.body %></p>
-                    <p><%= tarefa.task_date %></p>
+                    <p class="dateFormat"><%= tarefa.task_date %></p>
                     <a class="btn btn-edit" href="/edit/<%= tarefa.id %>" >Editar</a>
                          <form action="/delete" method="POST" style="display: inline;" onsubmit="confirmarDelecao(event, this)">
                              <input type="hidden" name="id" value="<%= tarefa.id %>">

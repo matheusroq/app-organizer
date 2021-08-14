@@ -21,14 +21,8 @@ body {
     color: var(--green);
 }
 .invalid {
-    color: var(--white-smoke);
-    font-weight: bold;
-}
-.response {
-    background-color: crimson;
-    border-radius: 10px;
-    margin: 12px auto;
-    padding: 10px;
+    color: crimson;
+    margin: 8px auto;
 }
 
 .navbar {
@@ -176,9 +170,5 @@ body {
     height: auto;
     padding: 10px;
     margin: 20px;
-}
-
-.tasks {
-    margin: 0 auto;
 }
 
