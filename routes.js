@@ -26,7 +26,7 @@ route.post('/save', loggedUser, tarefaController.save);
 route.post('/delete', loggedUser, tarefaController.delete);
 route.get('/edit/:id', loggedUser, tarefaController.edit);
 route.post('/tarefas/update', loggedUser, tarefaController.update);
-
+route.post('/complete', loggedUser, tarefaController.complete);
 
 
 module.exports = route;

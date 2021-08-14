@@ -6,7 +6,7 @@ exports.login = (req, res) => {
 
 exports.home = (req, res) => {
     let userId = req.session.user.id;
-    Task.findAll({raw: true, where: { cadastroId: userId }, order: [
+    Task.findAll({raw: true, where: { cadastroId: userId, isComplete: 0 }, order: [
         ['id', 'DESC']
     ]}).then(tarefas => {
         res.render('index', {

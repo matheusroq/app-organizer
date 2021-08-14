@@ -11,11 +11,14 @@
                     <p><%= tarefa.body %></p>
                     <p class="dateFormat"><%= tarefa.task_date %></p>
                     <a class="btn btn-edit" href="/edit/<%= tarefa.id %>" >Editar</a>
-                         <form action="/delete" method="POST" style="display: inline;" onsubmit="confirmarDelecao(event, this)">
+                         <form action="/delete" method="POST" style="display: inline;">
                              <input type="hidden" name="id" value="<%= tarefa.id %>">
                              <button class="btn btn-delete">Deletar</button>
                          </form>
-                         
+                         <form action="/complete" method="POST" style="display: inline;">
+                            <input type="hidden" name="id" value="<%= tarefa.id %>">
+                             <button class="btn btn-complete">Realizada</button>
+                        </form>
                 </div>
             </div>
             <%  }) %>

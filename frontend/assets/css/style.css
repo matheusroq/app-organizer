@@ -116,6 +116,7 @@ body {
     transition: ease-in-out 300ms;
     text-decoration: none;
 }
+
 .btn-edit:hover {
     background-color: #ffdf8b;
     color: var(--white-smoke);
@@ -131,8 +132,17 @@ body {
     color: var(--white-smoke);
 }
 
-.btn-success {
-    color: var(--success);
+.btn-complete {
+    background-color: var(--white-smoke);
+    color: var(--green);
+    padding: 10px;
+    border: none;
+    transition: ease-in-out 300ms;
+    text-decoration: none;
+}
+.btn-complete:hover {
+    background-color: var(--green);
+    color: var(--white-smoke);
 }
 .link-btn {
     font-size: 10px;

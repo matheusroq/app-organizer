@@ -68,3 +68,19 @@ exports.update = (req, res) => {
         res.redirect('/home');
     })
 };
+
+exports.complete = async (req, res) => {
+    try {
+        const { id } = req.body
+        const update = await Task.update({isComplete: 1}, {
+            where: { id }
+        })
+        if(update === 1) {
+            res.redirect('/home');
+        } else {
+            res.redirect('/home');
+        }
+    } catch (error) {
+        console.log(error)
+    }   
+}
