@@ -27,8 +27,8 @@ const dataDefinition = async () => {
           ],
         datasets: [{
           label: 'Todas as tarefas',
-          backgroundColor:  ['red', 'yellow'],
-          borderColor: ['red', 'yellow'],
+          backgroundColor:  ['#ff3b63', '#ffdf8b'],
+          borderColor: ['#ff3b63', '#ffdf8b'],
           data: [completed, uncompleted],
         }]
       };

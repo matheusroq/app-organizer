@@ -40,6 +40,15 @@ body {
 }
 .navbar ul {
     list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-ul {
+    margin: 0 auto;
+}
+.navbar ul li {
+    padding: 0 10px;
 }
 .navbar a {
     text-decoration: none;
@@ -182,3 +191,8 @@ body {
     margin: 20px;
 }
 
+.chart-container {
+    margin: 70px auto;
+    width: 400px;
+    height: auto;
+}
