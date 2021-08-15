@@ -57,7 +57,7 @@ app.use(globalmiddleware);
 app.use(routes);
 
 
-
-app.listen(8080, () => {
+const PORT = process.env.PORT || 8080
+app.listen(PORT, () => {
     console.log('Rodando')
 });
