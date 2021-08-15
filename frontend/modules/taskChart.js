@@ -22,13 +22,13 @@ const dataDefinition = async () => {
     await getData()
     return {
         labels:  [
-            'Completadas',
-            'Não completadas'
+            'Completas',
+            'Não completas'
           ],
         datasets: [{
           label: 'Todas as tarefas',
-          backgroundColor:  ['#ff3b63', '#ffdf8b'],
-          borderColor: ['#ff3b63', '#ffdf8b'],
+          backgroundColor:  ['#d3e8d6', '#8aab8f'],
+          borderColor: ['#d3e8d6', '#8aab8f'],
           data: [completed, uncompleted],
         }]
       };
