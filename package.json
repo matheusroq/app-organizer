@@ -5,12 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js",
     "dev": "webpack -w"
   },
   "author": "matheus",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "chart.js": "^3.5.0",
     "connect-flash": "^0.1.1",
     "connect-session-sequelize": "^7.1.1",
     "core-js": "^3.10.1",
@@ -19,6 +21,7 @@
     "express": "^4.17.1",
     "express-session": "^1.17.1",
     "mysql2": "^2.2.5",
+    "nodemon": "^2.0.12",
     "regenerator-runtime": "^0.13.7",
     "sequelize": "^6.6.1",
     "sqlite3": "^5.0.2",

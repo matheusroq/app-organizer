@@ -5,6 +5,7 @@ const homeController = require('./controllers/homeController');
 const cadastroController = require('./controllers/cadastroController');
 const loginController = require('./controllers/loginController');
 const tarefaController = require('./controllers/tarefaController');
+const taskChartController = require('./controllers/TaskChartController');
 const { loggedUser } = require('./middlewares/middleware');
 
 //registro
@@ -28,5 +29,8 @@ route.get('/edit/:id', loggedUser, tarefaController.edit);
 route.post('/tarefas/update', loggedUser, tarefaController.update);
 route.post('/complete', loggedUser, tarefaController.complete);
 
+//chart
+route.get('/task-chart', loggedUser, taskChartController.chartsPage);
+route.get('/task-chart-data', loggedUser, taskChartController.chartData);
 
 module.exports = route;
